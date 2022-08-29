@@ -29,6 +29,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="QdW-Dc-jlT" firstAttribute="centerY" secondItem="Nfz-jN-fVQ" secondAttribute="centerY" id="HhI-yu-nPh"/>
+                                    <constraint firstItem="QdW-Dc-jlT" firstAttribute="top" secondItem="Nfz-jN-fVQ" secondAttribute="top" constant="20" id="Ovo-KZ-9Mh"/>
                                     <constraint firstAttribute="trailing" secondItem="QdW-Dc-jlT" secondAttribute="trailing" constant="4" id="Pbz-Pd-96b"/>
                                     <constraint firstItem="QdW-Dc-jlT" firstAttribute="leading" secondItem="Nfz-jN-fVQ" secondAttribute="leading" constant="20" id="cOe-4D-od7"/>
                                 </constraints>
@@ -69,39 +70,31 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBA-uc-flG">
-                                <rect key="frame" x="64.5" y="148" width="246.5" height="134"/>
+                                <rect key="frame" x="40" y="154" width="294" height="131"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO1-uO-9i6">
-                                        <rect key="frame" x="20" y="20" width="206.5" height="94"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="94" id="ck3-pb-xRW"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO1-uO-9i6">
+                                        <rect key="frame" x="8" y="34" width="290" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="HO1-uO-9i6" firstAttribute="leading" secondItem="OBA-uc-flG" secondAttribute="leading" constant="20" id="nUi-f4-lIS"/>
-                                    <constraint firstItem="HO1-uO-9i6" firstAttribute="centerX" secondItem="OBA-uc-flG" secondAttribute="centerX" id="wuD-Wc-Whf"/>
-                                    <constraint firstItem="HO1-uO-9i6" firstAttribute="centerY" secondItem="OBA-uc-flG" secondAttribute="centerY" id="zs0-Qr-kre"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OBA-uc-flG" secondAttribute="trailing" constant="41" id="6uI-FT-6Im"/>
+                            <constraint firstItem="OBA-uc-flG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="70T-l5-xvj"/>
                             <constraint firstItem="Nfz-jN-fVQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="A86-Hr-32i"/>
-                            <constraint firstItem="OBA-uc-flG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64.5" id="BnR-LW-FRi"/>
-                            <constraint firstItem="OBA-uc-flG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="148" id="FdV-1T-BZH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OBA-uc-flG" secondAttribute="trailing" constant="64" id="HFc-SB-nC1"/>
                             <constraint firstItem="Nfz-jN-fVQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="JT6-pu-JGz"/>
-                            <constraint firstItem="iui-ev-KaB" firstAttribute="top" secondItem="OBA-uc-flG" secondAttribute="bottom" constant="74" id="MHD-Yp-ZQx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iui-ev-KaB" secondAttribute="bottom" constant="253" id="NZ0-J7-O4Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iui-ev-KaB" secondAttribute="trailing" constant="20.5" id="Ptu-2E-HDd"/>
-                            <constraint firstItem="OBA-uc-flG" firstAttribute="top" secondItem="Nfz-jN-fVQ" secondAttribute="bottom" constant="13" id="RKC-5c-CMb"/>
                             <constraint firstItem="iui-ev-KaB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20.5" id="Xkj-aV-hfy"/>
+                            <constraint firstItem="iui-ev-KaB" firstAttribute="top" secondItem="OBA-uc-flG" secondAttribute="bottom" constant="71" id="YTe-DA-6Nx"/>
+                            <constraint firstItem="OBA-uc-flG" firstAttribute="top" secondItem="Nfz-jN-fVQ" secondAttribute="bottom" constant="19" id="hf2-j8-kcl"/>
                             <constraint firstItem="iui-ev-KaB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mW2-IO-Sq9"/>
                             <constraint firstItem="Nfz-jN-fVQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z7c-WP-5lB"/>
                         </constraints>

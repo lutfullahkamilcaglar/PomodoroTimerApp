@@ -48,15 +48,27 @@ class PomodoroViewController: UIViewController {
     }
     
     @IBAction func resetButton(_ sender: Any) {
-        resetButton.isEnabled = false
+        //resetButton.isEnabled = false
         resetButton.alpha = 0.5
-        myTimer.invalidate()
-        time = 1500
-        isTimerStarted = false
-        timeLabel.text = "25:00"
+        //myTimer.invalidate()
+        //time = 1500
+        //isTimerStarted = false
+        //timeLabel.text = "25:00"
         
-        startButton.setTitle("Start", for: .normal)
-        startButton.setTitleColor(UIColor.blue, for: .normal)
+        let alert = UIAlertController(title: "Reset Timer?", message: "Are you sure you would like to reset the Timer?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: { (_) in
+            //do nothing
+        }))
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (_) in
+            self.time = 1500
+            self.myTimer.invalidate()
+            self.timeLabel.text = "25:00"
+            self.startButton.setTitle("START", for: .normal)
+            self.startButton.setTitleColor(UIColor.blue, for: .normal)
+            self.resetButton.setTitleColor(UIColor.green, for: .normal)
+        }))
+        self.present(alert,animated: true, completion: nil)
+        
     }
     
     func startTimer(){
@@ -67,6 +79,7 @@ class PomodoroViewController: UIViewController {
         //fix when time < 1
         time -= 1
         timeLabel.text = formatTime()
+        // add new future there is a app timer app git copy code for alert
     }
     
     func formatTime()->String{

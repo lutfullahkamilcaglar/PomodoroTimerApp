@@ -27,9 +27,23 @@ class StopWatchViewController: UIViewController {
     
     
     @IBAction func resetButton(_ sender: Any) {
-        OurTimer.invalidate()
-        TimerDisplayed = 0
-        timeLabel.text = "00:00:00"
+//      OurTimer.invalidate()
+        //TimerDisplayed = 0
+        //timeLabel.text = "00:00:00"
+        
+        let alert = UIAlertController(title: "Reset Timer?", message: "Are you sure you would like to reset the Timer?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: { (_) in
+            //do nothing
+        }))
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (_) in
+            self.TimerDisplayed = 0
+            self.OurTimer.invalidate()
+            self.timeLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
+//            self.startButton.setTitle("START", for: .normal)
+//            self.startStopButton.setTitleColor(UIColor.green, for: .normal)
+        }))
+        self.present(alert,animated: true, completion: nil)
+        
     }
     
     @objc func Action() {
@@ -41,22 +55,22 @@ class StopWatchViewController: UIViewController {
         timeLabel.text = timeString
         
     }
-   
+    
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int)
-        {
-            return ((seconds / 3600), ((seconds % 3600) / 60),((seconds % 3600) % 60))
-        }
+    {
+        return ((seconds / 3600), ((seconds % 3600) / 60),((seconds % 3600) % 60))
+    }
     
     func makeTimeString(hours: Int, minutes: Int, seconds : Int) -> String
-        {
-            var timeString = ""
-            timeString += String(format: "%02d", hours)
-            timeString += " : "
-            timeString += String(format: "%02d", minutes)
-            timeString += " : "
-            timeString += String(format: "%02d", seconds)
-            return timeString
-        }
+    {
+        var timeString = ""
+        timeString += String(format: "%02d", hours)
+        timeString += " : "
+        timeString += String(format: "%02d", minutes)
+        timeString += " : "
+        timeString += String(format: "%02d", seconds)
+        return timeString
+    }
     
     
     override func viewDidLoad() {

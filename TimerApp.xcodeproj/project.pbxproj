@@ -15,6 +15,7 @@
 		F5416E7728BB899A001D602B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5416E7528BB899A001D602B /* LaunchScreen.storyboard */; };
 		F5416E8428BBB5B0001D602B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5416E8328BBB5B0001D602B /* ViewController.swift */; };
 		F5416E8628BBB692001D602B /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5416E8528BBB692001D602B /* PomodoroViewController.swift */; };
+		F559343C28BE3ABD0043B1CD /* damn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F559343B28BE3ABD0043B1CD /* damn.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F5416E7828BB899A001D602B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5416E8328BBB5B0001D602B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = TimerApp/ViewController.swift; sourceTree = "<group>"; };
 		F5416E8528BBB692001D602B /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
+		F559343B28BE3ABD0043B1CD /* damn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = damn.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		F5416E6928BB8998001D602B /* TimerApp */ = {
 			isa = PBXGroup;
 			children = (
+				F5416E8B28BE3934001D602B /* Sounds */,
 				F5416E6A28BB8998001D602B /* AppDelegate.swift */,
 				F5416E6C28BB8998001D602B /* SceneDelegate.swift */,
 				F5416E8028BBB348001D602B /* Controller */,
@@ -80,6 +83,14 @@
 			);
 			name = Controller;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		F5416E8B28BE3934001D602B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F559343B28BE3ABD0043B1CD /* damn.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			files = (
 				F5416E7728BB899A001D602B /* LaunchScreen.storyboard in Resources */,
 				F5416E7428BB899A001D602B /* Assets.xcassets in Resources */,
+				F559343C28BE3ABD0043B1CD /* damn.mp3 in Resources */,
 				F5416E7228BB8998001D602B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
